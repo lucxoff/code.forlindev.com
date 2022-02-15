@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>{% block title %}Code - Forlindev{% endblock %}</title>
+        <link rel="stylesheet" href="{{ asset('assets/css/style.css') }}">
+        {% block stylesheets %}
+        {% endblock %}
+
+        {% block javascripts %}
+        {% endblock %}
+    </head>
+    <body>
+
+        <div class="buttons">
+            {% block buttons %}
+                <a href="#" onclick="saveCode()">Save <span>ctrl+s</span></a>
+                <a href="{{ path('app_newcode') }}">New <span>ctrl+l</span></a>
+            {% endblock %}
+        </div>
+        {% block body %}{% endblock %}
+
+
+        <script type="text/javascript">
+            // Save code to api and return id
+            function saveCode() {
+                let code = document.getElementById('code-textarea').value;
+                let url = '{{ path('api_save_code') }}'
+                let xhr = new XMLHttpRequest();
+                xhr.open('POST', url, true);
+                xhr.setRequestHeader('Content-type', 'application/x-www-form-urlencoded');
+                xhr.onload = function () {
+                    if (xhr.status === 201) {
+                        let response = JSON.parse(xhr.responseText);
+                        let id = response.id;
+                        let url = '{{ path('app_code_show', {'id': '_id_'}) }}'.replace('_id_', id);
+                        window.location.replace(url);
+                    }
+                };
+                xhr.send('code=' + code);
+            }
+
+        </script>
+
+        {% block keydown %}
+        {% endblock %}
+
+
+
+    </body>
+</html>

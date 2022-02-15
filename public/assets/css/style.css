@@ -1,0 +1,89 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: #002b36;
+    color: #839496;
+    font-family: 'monospace', sans-serif;
+    font-size: 16px;
+}
+
+.container {
+    width: 100%;
+    display: flex;
+}
+
+.code-wrapper textarea {
+    width: 97vw;
+    min-height: 98vh;
+    border: none;
+    outline: none;
+    background-color: transparent;
+    color: #839496;
+    font-size: 16px;
+    resize: none;
+}
+
+.buttons {
+    position: fixed;
+    top: 0;
+    right: 0;
+    padding: 2rem;
+    background-color: lightblue;
+    opacity: 0.5;
+}
+
+.buttons:hover {
+    opacity: 1;
+}
+
+.buttons a:first-child {
+    margin-right: 10px ;
+}
+
+.buttons a {
+    text-decoration: none;
+    color: black;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+.buttons a:hover {
+    text-decoration: underline;
+}
+
+code {
+    max-width: 97vw;
+    overflow-x: clip;
+    white-space: pre-wrap;
+}
+
+.line-wrapper {
+    padding-top: 1em;
+    margin-left: 1rem;
+}
+
+.number {
+    padding-top: 1px;
+    text-align: end;
+}
+
+.hljs > * {
+    padding-top: 2px !important;
+    font-size: 16px !important;
+    text-align: end;
+}
+
+.buttons a span {
+    font-size: 10px;
+}
+
+.buttons a span:before {
+    content: '(';
+}
+
+.buttons a span:after {
+    content: ')';
+}

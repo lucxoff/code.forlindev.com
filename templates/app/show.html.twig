@@ -1,0 +1,39 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Code{% endblock %}
+
+{% block javascripts %}
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.4.0/highlight.min.js" integrity="sha512-IaaKO80nPNs5j+VLxd42eK/7sYuXQmr+fyywCNA0e+C6gtQnuCXNtORe9xR4LqGPz5U9VpH+ff41wKs/ZmC3iA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.4.0/styles/base16/solarized-dark.min.css" integrity="sha512-kBHeOXtsKtA97/1O3ebZzWRIwiWEOmdrylPrOo3D2+pGhq1m+1CroSOVErIlsqn1xmYowKfQNVDhsczIzeLpmg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script>hljs.highlightAll();</script>
+{% endblock %}
+
+{% block buttons %}
+    <a href="{{ path('app_newcode') }}">New <span>ctrl+l</span></a>
+{% endblock %}
+
+{% block body %}
+    <div class="container">
+        <div class="line-wrapper">
+            {% for i in 0..lines %}
+                <div class="number">{{ i }}</div>
+            {% endfor %}
+        </div>
+        <div class="code-wrapper">
+            <pre><code>{{ code }}</code></pre>
+        </div>
+    </div>
+{% endblock %}
+
+{% block keydown %}
+    <script>
+        document.onkeydown = function(e) {
+            if (e.ctrlKey && e.code === 'KeyL') {
+                window.location.replace('{{ path('app_newcode') }}');
+                // your code here
+                return false;
+            }
+        };
+    </script>
+{% endblock %}
+

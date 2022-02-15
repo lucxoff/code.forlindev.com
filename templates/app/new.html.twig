@@ -1,0 +1,47 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}New{% endblock %}
+
+{% block javascripts %}
+<script src="https://cdnjs.cloudflare.com/ajax/libs/autosize.js/5.0.0/autosize.min.js" integrity="sha512-zibtOTbkMuTivXGk5b8yJFGLIB1jF90NuV7gwNcVWL3xZx/I1HdkXU2pCZhadsuaS5HMUzabvRqK4WmWeKrwUg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+{% endblock %}
+
+{% block body %}
+    <div class="container">
+        <div class="line-wrapper">
+            <div class="line">></div>
+        </div>
+        <div class="code-wrapper" style="margin-top: 15px;margin-left: 10px;">
+            <!-- textarea -->
+            <div class="code-textarea">
+                <textarea id="code-textarea" class="code-textarea" ></textarea>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        let ta = document.querySelector('textarea');
+        autosize(ta);
+    </script>
+
+
+{% endblock %}
+
+ {% block keydown %}
+     <script>
+         document.onkeydown = function(e) {
+             if (e.ctrlKey && e.code === 'KeyS' ) {
+                 e.preventDefault()
+                 saveCode();
+                 // your code here
+                 return false;
+             }
+
+             else if (e.ctrlKey && e.code === 'KeyL') {
+                 window.location.replace('{{ path('app_newcode') }}');
+                 // your code here
+                 return false;
+             }
+         };
+     </script>
+ {% endblock %}
