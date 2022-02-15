@@ -2,6 +2,18 @@
 
 {% block title %}Shared code - Forlindev{% endblock %}
 
+{%  block meta %}
+    <!-- Open Graph -->
+    <meta property="og:title" content="Shared code - Forlindev">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="{{ path('app_homepage') }}">
+    <meta property="og:image" content="{{ asset('assets/img/logo.png') }}">
+    <meta property="og:description" content="Share code with Forlindev">
+    <meta property="og:site_name" content="Forlindev">
+    <meta property="og:locale" content="en_US">
+    <meta property="og:locale:alternate" content="fr_FR">
+{% endblock %}
+
 {% block javascripts %}
     <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.4.0/highlight.min.js" integrity="sha512-IaaKO80nPNs5j+VLxd42eK/7sYuXQmr+fyywCNA0e+C6gtQnuCXNtORe9xR4LqGPz5U9VpH+ff41wKs/ZmC3iA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.4.0/styles/base16/solarized-dark.min.css" integrity="sha512-kBHeOXtsKtA97/1O3ebZzWRIwiWEOmdrylPrOo3D2+pGhq1m+1CroSOVErIlsqn1xmYowKfQNVDhsczIzeLpmg==" crossorigin="anonymous" referrerpolicy="no-referrer" />

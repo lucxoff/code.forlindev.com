@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="5a0b513b-85b4-4057-8c8f-f883c458ec00" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/app/new.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/app/new.html.twig" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/app/show.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/app/show.html.twig" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/base.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/base.html.twig" afterDir="false" />
     </list>
@@ -118,7 +117,7 @@
       <updated>1644933387693</updated>
       <workItem from="1644933388873" duration="4999000" />
       <workItem from="1644952395971" duration="65000" />
-      <workItem from="1644952484823" duration="4877000" />
+      <workItem from="1644952484823" duration="5287000" />
     </task>
     <servers />
   </component>

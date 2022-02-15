@@ -8,6 +8,44 @@
         <!-- Icon -->
         <link rel="icon" type="image/png" href="{{ asset('assets/favicon.png') }}">
 
+        <!-- Meta -->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="Share code with Forlindev">
+        <meta name="keywords" content="code, share, forlindev">
+        <meta name="author" content="Forlindev">
+        <meta name="robots" content="index, follow">
+        <meta name="revisit-after" content="1 day">
+        <meta name="language" content="English">
+        <meta name="generator" content="Forlindev">
+        <meta name="copyright" content="Forlindev">
+        <meta name="rating" content="General">
+        <meta name="distribution" content="Global">
+        <meta name="doc-type" content="Web Page">
+        <meta name="doc-class" content="Published">
+        <meta name="doc-rights" content="Public">
+        <meta name="doc-rating" content="Safe For Kids">
+
+        {% block meta %}
+        <!-- Open Graph -->
+        <meta property="og:title" content="Code - Forlindev">
+        <meta property="og:type" content="website">
+        <meta property="og:url" content="{{ path('app_homepage') }}">
+        <meta property="og:image" content="{{ asset('assets/img/logo.png') }}">
+        <meta property="og:description" content="Share code with Forlindev">
+        <meta property="og:site_name" content="Forlindev">
+        <meta property="og:locale" content="en_US">
+        <meta property="og:locale:alternate" content="fr_FR">
+        {% endblock %}
+
+        <!-- Twitter -->
+        <meta name="twitter:card" content="summary">
+        <meta name="twitter:site" content="@Forlindev">
+        <meta name="twitter:title" content="Code - Forlindev">
+        <meta name="twitter:description" content="Share code with Forlindev">
+        <meta name="twitter:image" content="{{ asset('assets/img/logo.png') }}">
+        <meta name="twitter:image:alt" content="Forlindev">
+        <meta name="twitter:creator" content="@Forlindev">
+
         {% block stylesheets %}
         {% endblock %}
 
