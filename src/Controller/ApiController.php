@@ -26,7 +26,11 @@ class ApiController extends AbstractController
         }
 
         // Get the code from the request
-        $content = $request->get('code');
+        $data = [];
+        if ($contentRequest = $request->getContent()) {
+            $data = json_decode($contentRequest, true);
+        }
+        $content = $data['code'];
 
         // Mysql real escape string
         $content = addslashes($content);

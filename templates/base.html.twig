@@ -62,24 +62,26 @@
         </div>
         {% block body %}{% endblock %}
 
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.26.0/axios.min.js" integrity="sha512-bPh3uwgU5qEMipS/VOmRqynnMXGGSRv+72H/N260MQeXZIK4PG48401Bsby9Nq5P5fz7hy5UGNmC/W1Z51h2GQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
         <script type="text/javascript">
             // Save code to api and return id
             function saveCode() {
-                let code = document.getElementById('code-textarea').value;
-                let url = '{{ path('api_save_code') }}'
-                let xhr = new XMLHttpRequest();
-                xhr.open('POST', url, true);
-                xhr.setRequestHeader('Content-type', 'application/x-www-form-urlencoded');
-                xhr.onload = function () {
-                    if (xhr.status === 201) {
-                        let response = JSON.parse(xhr.responseText);
-                        let id = response.id;
-                        let url = '{{ path('app_code_show', {'id': '_id_'}) }}'.replace('_id_', id);
-                        window.location.replace(url);
-                    }
-                };
-                xhr.send('code=' + code);
+                // Create a new Axios post request
+                axios.post('{{ path('api_save_code') }}', {
+                    'code' : document.getElementById('code-textarea').value,
+                }, {
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                }).then(response => {
+                    let data = response.data;
+                    let id = data['id'];
+                    let url = '{{ path('app_code_show', {'id': '_id_'}) }}'.replace('_id_', id);
+                    window.location.replace(url);
+                }).catch(error => {
+                    console.log(error);
+                });
             }
 
         </script>
