@@ -13,15 +13,7 @@ use Symfony\Component\Routing\Annotation\Route;
 class AppController extends AbstractController
 {
     /**
-     * @Route("/", name="app_homepage")
-     */
-    public function index(): RedirectResponse
-    {
-        return $this->redirectToRoute('app_newcode');
-    }
-
-    /**
-     * @Route("/new", name="app_newcode")
+     * @Route("/", name="app_newcode")
      */
     public function newCode(): Response
     {
@@ -37,7 +29,7 @@ class AppController extends AbstractController
         $code = $codeRepository->findOneBy(['id' => $request->get('id')]);
         // If the code is not found, redirect to the homepage
         if (!$code) {
-            return $this->redirectToRoute('app_homepage');
+            return $this->redirectToRoute('app_newcode');
         }
         $content = $code->getContent();
         $content = stripslashes($content);

@@ -29,7 +29,7 @@
         <!-- Open Graph -->
         <meta property="og:title" content="Code - Forlindev">
         <meta property="og:type" content="website">
-        <meta property="og:url" content="{{ path('app_homepage') }}">
+        <meta property="og:url" content="{{ path('app_newcode') }}">
         <meta property="og:image" content="{{ asset('assets/img/logo.png') }}">
         <meta property="og:description" content="Share code with Forlindev">
         <meta property="og:site_name" content="Forlindev">
@@ -67,6 +67,7 @@
         <script type="text/javascript">
             // Save code to api and return id
             function saveCode() {
+
                 // Create a new Axios post request
                 axios.post('{{ path('api_save_code') }}', {
                     'code' : document.getElementById('code-textarea').value,
