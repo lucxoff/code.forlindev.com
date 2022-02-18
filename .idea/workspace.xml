@@ -2,10 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5a0b513b-85b4-4057-8c8f-f883c458ec00" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Controller/AppController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/AppController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/app/show.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/app/show.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/base.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/base.html.twig" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -127,7 +125,9 @@
       <workItem from="1644933388873" duration="4999000" />
       <workItem from="1644952395971" duration="65000" />
       <workItem from="1644952484823" duration="5955000" />
-      <workItem from="1644970713203" duration="1638000" />
+      <workItem from="1644970713203" duration="1946000" />
+      <workItem from="1644978394293" duration="21000" />
+      <workItem from="1645215278118" duration="777000" />
     </task>
     <servers />
   </component>
